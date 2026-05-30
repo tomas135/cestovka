@@ -28,7 +28,7 @@
         <div class="dest-header">
             <h1>Kouzelné Maroko</h1>
             <p class="dest-desc">Maroko je bránou do Afriky a zemí nekonečných kontrastů. Ztratíte se v křivolakých uličkách starobylých medin, ochutnáte tradiční tajine a mátový čaj a na hřbetu velblouda se vydáte vstříc západu slunce nad písečnými dunami nekonečné Sahary. Každý krok zde dýchá orientální mystikou.</p>
-            <a href="#" class="btn" onclick="alert('Funkce rezervace bude brzy dostupná!')">Mám zájem o zájezd</a>
+            <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
         </div>
 
         <div class="gallery">
@@ -37,9 +37,107 @@
         </div>
     </main>
 
+    <!-- Modal Podrobnosti Zájezdu -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" id="close-modal-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Podrobnosti zájezdu: Kouzelné Maroko</h2>
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>12. 10. - 22. 10. 2026</span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>11 dní / 10 nocí</span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="fas fa-wallet"></i>
+                        <span>24 990 Kč</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3>O zájezdu</h3>
+                <p>Vydejte se s námi na nezapomenutelnou cestu plnou vůní, barev a orientální mystiky. Tento zájezd je pečlivě sestaven tak, abyste poznali to nejlepší z Maroka – od královských měst plných historie, přes divoké pohoří Atlas, až po magické noci pod hvězdami na Saharské poušti.</p>
+                
+                <h3>Detailní program</h3>
+                <div class="program-timeline">
+                    <div class="program-day">
+                        <h4>1. den: Přílet do Marrákeše</h4>
+                        <p>Transfer do hotelu, ubytování a první nasátí atmosféry. Večerní návštěva slavného náměstí Jemaa el-Fnaa s kejklíři a stánky s jídlem.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>2. den: Krásy Marrákeše</h4>
+                        <p>Celodenní prohlídka města s průvodcem. Navštívíme palác Bahia, Saadské hrobky, zahradu Jardin Majorelle a proslulé trhy (souky).</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>3. den: Přechod pohoří Atlas & Aït Benhaddou</h4>
+                        <p>Přejezd přes pohoří Atlas přes průsmyk Tizi n'Tichka (2260 m). Prohlídka hliněné pevnosti Aït Benhaddou (UNESCO) a příjezd do filmového Ouarzazate.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>4. den: Soutěsky a brána Sahary</h4>
+                        <p>Průjezd údolím růží, procházka v úchvatné soutěsce Todra s obřími skalními stěnami. Odpoledne příjezd do pouštní brány Merzouga.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>5. den: Magická Sahara</h4>
+                        <p>Dopolední relax u bazénu. Odpoledne jízda na velbloudech do dun Erg Chebbi. Večer tradiční berberská večeře, hudba u ohně a noc v luxusním pouštním kempu.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>6. - 10. den: Císařská města, Fes a Chefchaouen</h4>
+                        <p>Pokračování cesty na sever přes Midelt do nejstaršího města Fes s jeho 9000 uličkami. Navštívíme také fotogenické modré město Chefchaouen, Casablanku s mešitou Hasana II. a vrátíme se do Marrákeše.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>11. den: Odlet domů</h4>
+                        <p>Volný čas na nákup posledních dárků a koření, transfer na letiště a odlet zpět do ČR.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" style="background-color: transparent; color: var(--secondary-color); border-color: var(--secondary-color);" id="close-modal-btn-2">Zavřít</button>
+                <button class="btn" onclick="alert('Děkujeme za váš zájem! Naši specialisté se vám ozvou do 24 hodin.')">Nezávazně poptat</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 CK Slunce. Všechna práva vyhrazena. | Vaše dovolená s úsměvem.</p>
     </footer>
 
+    <script>
+        const openModalBtn = document.getElementById('open-modal-btn');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const closeModalBtn2 = document.getElementById('close-modal-btn-2');
+        const modal = document.getElementById('detail-modal');
+
+        openModalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        closeModalBtn2.addEventListener('click', closeModal);
+
+        // Close modal on click outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>

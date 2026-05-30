@@ -34,7 +34,7 @@
                 zde jedny z nejpozoruhodnějších přírodních úkazů v Evropě. Čekají na vás bouřící vodopády s obrovskou
                 silou, vybuchující gejzíry, sopečné pláže s černým pískem a majestátní ledovce. Pravé dobrodružství na
                 okraji polárního kruhu.</p>
-            <a href="#" class="btn" onclick="alert('Funkce rezervace bude brzy dostupná!')">Mám zájem o zájezd</a>
+            <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
         </div>
 
         <div class="gallery">
@@ -44,10 +44,115 @@
         </div>
     </main>
 
+    <!-- Modal Podrobnosti Zájezdu -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" id="close-modal-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Podrobnosti zájezdu: Tajemný Island</h2>
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>10. 7. - 18. 7. 2026</span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>9 dní / 8 nocí</span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="fas fa-wallet"></i>
+                        <span>46 990 Kč</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3>O zájezdu</h3>
+                <p>Island, země ohně a ledu, je jedním z posledních divokých koutů Evropy. Náš dobrodružný okruh vás provede kolem celého ostrova a ukáže vám ty nejmajestátnější vodopády, bublající bahno, aktivní gejzíry, černé sopečné pláže i plovoucí ledové kry. Třešničkou na dortu je plavba za pozorováním velryb a relaxace v termálních lázních.</p>
+                
+                <h3>Detailní program</h3>
+                <div class="program-timeline">
+                    <div class="program-day">
+                        <h4>1. den: Přílet do Keflavíku, termální lázně</h4>
+                        <p>Přílet na Island. V závislosti na letovém řádu návštěva a koupání v termálních lázních uprostřed lávových polí. Transfer do ubytování v Reykjavíku.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>2. den: Zlatý okruh (Golden Circle)</h4>
+                        <p>Návštěva národního parku Þingvellir (trhlina mezi severoamerickou a euroasijskou tektonickou deskou), geotermální oblasti s vybuchujícím gejzírem Strokkur a monumentálního vodopádu Gullfoss.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>3. den: Jižní pobřeží – Vodopády & černá pláž</h4>
+                        <p>Zastávka u pohádkového vodopádu Seljalandsfoss (lze projít za vodní stěnu) a mohutného Skógafoss. Procházka po světoznámé černé pláži Reynisfjara s čedičovými sloupy u městečka Vík.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>4. den: Ledovcová laguna Jökulsárlón & Diamantová pláž</h4>
+                        <p>Přejezd podél obrovského ledovce Vatnayökull. Návštěva slavné laguny Jökulsárlón s plujícími modrými krami a přilehlé Diamantové pláže. Ubytování na východě.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>5. den: Východní fjordy & termály u jezera Mývatn</h4>
+                        <p>Cesta scénickou krajinou východních fjordů s rybářskými vesničkami. Přejezd k jezeru Mývatn a večerní relaxace v termálních lázních Mývatn Nature Baths.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>6. den: Detifoss & sopečná krajina Mývatnu</h4>
+                        <p>Návštěva nejmohutnějšího vodopádu Evropy Dettifoss. Průzkum okolí jezera Mývatn: bublající bahenní sopky Hverir, lávový labyrint Dimmuborgir a pseudokrátery.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>7. den: Akureyri & pozorování velryb v Husavíku</h4>
+                        <p>Návštěva severního hlavního města Akureyri. Přejezd do Husavíku a plavba lodí za pozorováním velryb a delfínů v zálivu Skjálfandi.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>8. den: Poloostrov Snæfellsnes – "Island v miniatuře"</h4>
+                        <p>Cesta na západní poloostrov. Vyfocení ikonické hory Kirkjufell s vodopádem, procházka po divokém útesovém pobřeží u Arnarstapi a návrat do Reykjavíku.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>9. den: Reykjavík & odlet domů</h4>
+                        <p>Krátká prohlídka hlavního města (kostel Hallgrímskirkja, budova Harpa), nákup suvenýrů, transfer na letiště a odlet zpět do ČR.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" style="background-color: transparent; color: var(--secondary-color); border-color: var(--secondary-color);" id="close-modal-btn-2">Zavřít</button>
+                <button class="btn" onclick="alert('Děkujeme za váš zájem! Naši specialisté se vám ozvou do 24 hodin.')">Nezávazně poptat</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 CK Slunce. Všechna práva vyhrazena. | Vaše dovolená s úsměvem.</p>
     </footer>
 
-</body>
+    <script>
+        const openModalBtn = document.getElementById('open-modal-btn');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const closeModalBtn2 = document.getElementById('close-modal-btn-2');
+        const modal = document.getElementById('detail-modal');
 
+        openModalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        closeModalBtn2.addEventListener('click', closeModal);
+
+        // Close modal on click outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
 </html>

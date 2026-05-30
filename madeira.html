@@ -28,18 +28,120 @@
         <div class="dest-header">
             <h1>Zelená Madeira</h1>
             <p class="dest-desc">Madeira, často nazývaná jako 'ostrov věčného jara', je portugalský klenot v Atlantském oceánu. Je to ráj pro milovníky přírody a pěší turistiky. Prozkoumejte unikátní zavlažovací kanály, tzv. levády, které vás zavedou do nitra pralesů, nechte se ohromit strmými útesy padajícími do oceánu a vychutnejte si vynikající madeirské víno.</p>
-            <a href="#" class="btn" onclick="alert('Funkce rezervace bude brzy dostupná!')">Mám zájem o zájezd</a>
+            <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
         </div>
 
         <div class="gallery">
-            <img src="images/madeira_1.jpg" alt="Dramatické útesy a oceán na Madeiře">
+            <img src="images/madeira_1.jpg" alt="Dramatické útesy and oceán na Madeiře">
             <img src="images/madeira_2.jpg" alt="Zelené levády a příroda Madeiry">
         </div>
     </main>
+
+    <!-- Modal Podrobnosti Zájezdu -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" id="close-modal-btn"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2>Podrobnosti zájezdu: Zelená Madeira</h2>
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>15. 6. - 22. 6. 2026</span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>8 dní / 7 nocí</span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="fas fa-wallet"></i>
+                        <span>28 990 Kč</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3>O zájezdu</h3>
+                <p>Madeira je ostrovem věčného jara, kde divoká a nespoutaná příroda bují na každém kroku. Náš zájezd je ideální pro všechny milovníky pěší turistiky, úchvatných vyhlídek, dramatických útesů a dobrého jídla a vína. Prozkoumejte unikátní síť zavlažovacích kanálů (levád) a nechte se okouzlit kvetoucím rájem v Atlantiku.</p>
+                
+                <h3>Detailní program</h3>
+                <div class="program-timeline">
+                    <div class="program-day">
+                        <h4>1. den: Přílet do Funchalu</h4>
+                        <p>Transfer z letiště do hotelu ve Funchalu, ubytování, úvodní setkání a večerní procházka po pobřežní promenádě.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>2. den: Historický Funchal & tropická zahrada Monte</h4>
+                        <p>Prohlídka historického centra (katedrála Sé, tržnice Mercado dos Lavradores s exotickým ovocem). Výjezd lanovkou na horu Monte, návštěva tropické zahrady Monte Palace a možnost vyzkoušet slavnou jízdu v proutěných saních.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>3. den: Východní okruh – Pico do Arieiro a Santana</h4>
+                        <p>Časný ranní výjezd na třetí nejvyšší vrchol Pico do Arieiro (1818 m) za východem slunce nad mraky. Poté návštěva vesničky Santana s tradičními slaměnými domečky a nenáročná procházka s vyhlídkou Balcões.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>4. den: Divoký západ – Porto Moniz & Cabo Girão</h4>
+                        <p>Návštěva prosklené vyhlídky na druhém nejvyšším útesu Evropy Cabo Girão (580 m). Zastávka v rybářském městečku Câmara de Lobos a koupání v unikátních lávových přírodních bazénech v Porto Moniz.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>5. den: Vavřínový les Laurisilva & leváda 25 Fontes</h4>
+                        <p>Výlet do oblasti Rabaçal, procházka podél levády tajuplným vavřínovým lesem Laurisilva (památka UNESCO) k vodopádu Risco a k romantickému jezírku 25 pramenů.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>6. den: Poloostrov Ponta de São Lourenço</h4>
+                        <p>Pěší túra po nejvýchodnějším poloostrově ostrova. Drsná vulkanická krajina s dramatickými barevnými útesy ostře kontrastujícími s hlubokou modří oceánu. Možnost koupání na černé sopečné pláži Prainha.</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>7. den: Údolí jeptišek Curral das Freiras</h4>
+                        <p>Cesta do hlubokého sopečného kráteru v srdci ostrova. Výhledy z Eira do Serrado, ochutnávka kaštanových specialit. Volné odpoledne ve Funchalu pro nákup suvenýrů (madeirské víno, květiny, výšivky).</p>
+                    </div>
+                    <div class="program-day">
+                        <h4>8. den: Odlet domů</h4>
+                        <p>Volný čas před odletem na poslední nákupy a kávu, transfer na letiště a návrat zpět do ČR.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" style="background-color: transparent; color: var(--secondary-color); border-color: var(--secondary-color);" id="close-modal-btn-2">Zavřít</button>
+                <button class="btn" onclick="alert('Děkujeme za váš zájem! Naši specialisté se vám ozvou do 24 hodin.')">Nezávazně poptat</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 CK Slunce. Všechna práva vyhrazena. | Vaše dovolená s úsměvem.</p>
     </footer>
 
+    <script>
+        const openModalBtn = document.getElementById('open-modal-btn');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const closeModalBtn2 = document.getElementById('close-modal-btn-2');
+        const modal = document.getElementById('detail-modal');
+
+        openModalBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.classList.add('modal-open');
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+        closeModalBtn2.addEventListener('click', closeModal);
+
+        // Close modal on click outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
