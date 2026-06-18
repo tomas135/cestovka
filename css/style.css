@@ -50,16 +50,19 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--secondary-color);
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
-.logo span {
-    color: var(--primary-color);
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    transform: scale(1.03);
 }
 
 .nav-links {
@@ -590,5 +593,255 @@ body.modal-open {
     .modal-meta-item {
         font-size: 0.9rem;
         padding: 4px 12px;
+    }
+}
+
+/* Destination actions layout */
+.dest-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.btn-gallery {
+    background-color: var(--secondary-color) !important;
+    color: var(--white) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-gallery:hover {
+    background-color: transparent !important;
+    color: var(--secondary-color) !important;
+}
+
+/* Lightbox styles */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 85%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.lightbox-caption {
+    color: var(--white);
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-counter {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Lightbox Controls */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+    z-index: 3100;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.lightbox-close {
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.lightbox-prev {
+    left: 2rem;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+}
+
+.lightbox-next {
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+}
+
+/* Responsive lightbox controls for smaller screens */
+@media (max-width: 768px) {
+    .lightbox-prev {
+        left: 0.5rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    .lightbox-next {
+        right: 0.5rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    .lightbox-close {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Program highlights list */
+.program-highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1rem;
+    padding-left: 0;
+}
+
+.program-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.program-highlights li i {
+    color: var(--primary-dark);
+    margin-top: 4px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Pricing Info styling (Included / Excluded) */
+.price-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+}
+
+.price-info-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.price-info-box.included {
+    border-left: 5px solid #2e7d32; /* Rich Green */
+}
+
+.price-info-box.excluded {
+    border-left: 5px solid #d32f2f; /* Rich Red */
+}
+
+.price-info-box h4 {
+    color: var(--secondary-color);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-info-box.included h4 i {
+    color: #2e7d32;
+}
+
+.price-info-box.excluded h4 i {
+    color: #d32f2f;
+}
+
+.price-info-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.price-info-box ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.price-info-box ul li i {
+    margin-top: 3px;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.price-info-box.included ul li i {
+    color: #2e7d32;
+}
+
+.price-info-box.excluded ul li i {
+    color: #d32f2f;
+}
+
+@media (max-width: 650px) {
+    .price-info-container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
 }

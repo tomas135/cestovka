@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
         <nav>
-            <div class="logo">
-                <i class="fas fa-sun"></i> CK <span>Slunce</span>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="CK Slunce logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="maroko.html">Maroko</a></li>
@@ -27,8 +29,16 @@
     <main class="dest-page">
         <div class="dest-header">
             <h1>Zelená Madeira</h1>
-            <p class="dest-desc">Madeira, často nazývaná jako 'ostrov věčného jara', je portugalský klenot v Atlantském oceánu. Je to ráj pro milovníky přírody a pěší turistiky. Prozkoumejte unikátní zavlažovací kanály, tzv. levády, které vás zavedou do nitra pralesů, nechte se ohromit strmými útesy padajícími do oceánu a vychutnejte si vynikající madeirské víno.</p>
-            <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
+            <p class="dest-desc">Portugalský ostrov Madeira je kvetoucím rájem uprostřed Atlantiku.
+                Je to ráj pro milovníky přírody a pěší turistiky.
+                Čekají tu na tebe dechberoucí útesy, zurčící levády, eukalyptové lesy, malebné vesničky a vůně
+                exotických květin.
+                Ať už miluješ turistiku, přírodu nebo jen pohodu s výhledem na moře, Madeira tě prostě nadchne.
+            </p>
+            <div class="dest-actions">
+                <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
+                <a href="#" id="open-gallery-btn" class="btn btn-gallery"><i class="fas fa-images"></i> Galerie</a>
+            </div>
         </div>
 
         <div class="gallery">
@@ -41,7 +51,7 @@
     <div id="detail-modal" class="modal-overlay">
         <div class="modal-container">
             <button class="modal-close" id="close-modal-btn"><i class="fas fa-times"></i></button>
-            
+
             <!-- VIEW 1: PODROBNOSTI ZÁJEZDU -->
             <div id="modal-details-view">
                 <div class="modal-header">
@@ -63,41 +73,54 @@
                 </div>
                 <div class="modal-body">
                     <h3>O zájezdu</h3>
-                    <p>Madeira je ostrovem věčného jara, kde divoká a nespoutaná příroda bují na každém kroku. Náš zájezd je ideální pro všechny milovníky pěší turistiky, úchvatných vyhlídek, dramatických útesů a dobrého jídla a vína. Prozkoumejte unikátní síť zavlažovacích kanálů (levád) a nechte se okouzlit kvetoucím rájem v Atlantiku.</p>
-                    
-                    <h3>Detailní program</h3>
-                    <div class="program-timeline">
-                        <div class="program-day">
-                            <h4>1. den: Přílet do Funchalu</h4>
-                            <p>Transfer z letiště do hotelu ve Funchalu, ubytování, úvodní setkání a večerní procházka po pobřežní promenádě.</p>
+                    <p>Portugalský ostrov Madeira je kvetoucím rájem uprostřed Atlantiku.
+                        Je to ráj pro milovníky přírody a pěší turistiky.
+                        Čekají tu na tebe dechberoucí útesy, zurčící levády, eukalyptové lesy, malebné vesničky a vůně
+                        exotických květin.
+                        Ať už miluješ turistiku, přírodu nebo jen pohodu s výhledem na moře, Madeira tě prostě nadchne.
+                    </p>
+
+                    <h3>Co na zájezdu zažiješ</h3>
+                    <ul class="program-highlights">
+                        <li><i class="fas fa-heart"></i> Dovolená na Madeiře může být pohodová, dobrodružná i něco mezi
+                            tím – ostrov nabídne pro každého něco.</li>
+                        <li><i class="fas fa-hiking"></i> Vydej se s námi po stezkách podél levád (zavlažovacích kanálů)
+                            do oblasti Rabaçal, vystup na východ slunce na nejvyšší horu Pico Ruivo a projdi se po
+                            hřebeni z Pico Arieiro s dechberoucími výhledy.</li>
+                        <li><i class="fas fa-tree"></i> Prozkoumej unikátní pralesní ekosystém Madeiry – vavřínový les
+                            Fanal, připomínající pohádkový zapomenutý svět.</li>
+                        <li><i class="fas fa-glass-cheers"></i> Navštiv koloniální Funchal s muzeem CR7, ochutnej místní
+                            víno a vykoupej se v lávových bazénech v Porto Moniz.</li>
+                        <li><i class="fas fa-mountain"></i> Nebudou chybět ani útesy Cabo Girão nebo malebné Údolí
+                            jeptišek obklopené vysokými horami.</li>
+                        <li><i class="fas fa-compass"></i> Ostrov Madeira není jen o krásné přírodě.</li>
+                        <li><i class="fas fa-users"></i> Zažiješ zde mix portugalské kultury, divoké přírody a srdečných
+                            lidí.</li>
+                        <li><i class="fas fa-utensils"></i> Ochutnáš místní kuchyni včetně rybí speciality espada s
+                            banány nebo sladkými bramborami či hovězí špíz espetada.</li>
+                        <li><i class="fas fa-star"></i> Uvidíš pověstnou jízdu z kopce po asfaltové silnici na
+                            proutěných saních z městečka Monte dolů do Funchalu.</li>
+                        <li><i class="fas fa-camera"></i> Podnikneš túry s výhledy, na které jen tak nezapomeneš.</li>
+                    </ul>
+
+                    <div class="price-info-container">
+                        <div class="price-info-box included">
+                            <h4><i class="fas fa-check-circle"></i> Je v ceně</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Ubytování na 7 nocí</li>
+                                <li><i class="fas fa-check"></i> Doprava po ostrově</li>
+                                <li><i class="fas fa-check"></i> Služby průvodce a řidiče</li>
+                                <li><i class="fas fa-check"></i> Tištěné materiály a další služby</li>
+                                <li><i class="fas fa-check"></i> Ochutnávka místní speciality</li>
+                            </ul>
                         </div>
-                        <div class="program-day">
-                            <h4>2. den: Historický Funchal & tropická zahrada Monte</h4>
-                            <p>Prohlídka historického centra (katedrála Sé, tržnice Mercado dos Lavradores s exotickým ovocem). Výjezd lanovkou na horu Monte, návštěva tropické zahrady Monte Palace a možnost vyzkoušet slavnou jízdu v proutěných saních.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>3. den: Východní okruh – Pico do Arieiro a Santana</h4>
-                            <p>Časný ranní výjezd na třetí nejvyšší vrchol Pico do Arieiro (1818 m) za východem slunce nad mraky. Poté návštěva vesničky Santana s tradičními slaměnými domečky a nenáročná procházka s vyhlídkou Balcões.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>4. den: Divoký západ – Porto Moniz & Cabo Girão</h4>
-                            <p>Návštěva prosklené vyhlídky na druhém nejvyšším útesu Evropy Cabo Girão (580 m). Zastávka v rybářském městečku Câmara de Lobos a koupání v unikátních lávových přírodních bazénech v Porto Moniz.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>5. den: Vavřínový les Laurisilva & leváda 25 Fontes</h4>
-                            <p>Výlet do oblasti Rabaçal, procházka podél levády tajuplným vavřínovým lesem Laurisilva (památka UNESCO) k vodopádu Risco a k romantickému jezírku 25 pramenů.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>6. den: Poloostrov Ponta de São Lourenço</h4>
-                            <p>Pěší túra po nejvýchodnějším poloostrově ostrova. Drsná vulkanická krajina s dramatickými barevnými útesy ostře kontrastujícími s hlubokou modří oceánu. Možnost koupání na černé sopečné pláži Prainha.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>7. den: Údolí jeptišek Curral das Freiras</h4>
-                            <p>Cesta do hlubokého sopečného kráteru v srdci ostrova. Výhledy z Eira do Serrado, ochutnávka kaštanových specialit. Volné odpoledne ve Funchalu pro nákup suvenýrů (madeirské víno, květiny, výšivky).</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>8. den: Odlet domů</h4>
-                            <p>Volný čas před odletem na poslední nákupy a kávu, transfer na letiště a návrat zpět do ČR.</p>
+                        <div class="price-info-box excluded">
+                            <h4><i class="fas fa-times-circle"></i> Není v ceně</h4>
+                            <ul>
+                                <li><i class="fas fa-times"></i> Letenky zpáteční z Prahy nebo Katovic</li>
+                                <li><i class="fas fa-times"></i> Cestovní pojištění</li>
+                                <li><i class="fas fa-times"></i> Strava</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -111,7 +134,8 @@
             <div id="modal-form-view" style="display: none;">
                 <div class="modal-header">
                     <h2>Nezávazná poptávka</h2>
-                    <p class="form-intro">Vyplňte údaje níže. Po odeslání obdržíte potvrzení a my se vám ozveme zpět.</p>
+                    <p class="form-intro">Vyplňte údaje níže. Po odeslání obdržíte potvrzení a my se vám ozveme zpět.
+                    </p>
                 </div>
                 <div class="modal-body">
                     <!-- Zde změňte 'vas-email@domena.cz' na váš skutečný e-mail -->
@@ -120,7 +144,8 @@
                         <input type="hidden" name="_subject" value="Nová poptávka: Zelená Madeira">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
-                        <input type="text" name="_honey" style="display:none !important" tabindex="-1" autocomplete="off"> <!-- Honeypot Spam ochrana -->
+                        <input type="text" name="_honey" style="display:none !important" tabindex="-1"
+                            autocomplete="off"> <!-- Honeypot Spam ochrana -->
 
                         <div class="form-group">
                             <label for="dest-name">Vybraný zájezd</label>
@@ -130,18 +155,21 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="client-name">Jméno a příjmení *</label>
-                                <input type="text" id="client-name" name="Jméno a příjmení" required placeholder="Např. Jan Novák">
+                                <input type="text" id="client-name" name="Jméno a příjmení" required
+                                    placeholder="Např. Jan Novák">
                             </div>
                             <div class="form-group">
                                 <label for="client-email">E-mailová adresa *</label>
-                                <input type="email" id="client-email" name="Email" required placeholder="Např. jan.novak@email.cz">
+                                <input type="email" id="client-email" name="Email" required
+                                    placeholder="Např. jan.novak@email.cz">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="client-phone">Telefonní číslo *</label>
-                                <input type="tel" id="client-phone" name="Telefon" required placeholder="Např. +420 123 456 789">
+                                <input type="tel" id="client-phone" name="Telefon" required
+                                    placeholder="Např. +420 123 456 789">
                             </div>
                             <div class="form-group">
                                 <label for="client-travelers">Počet cestujících *</label>
@@ -151,11 +179,13 @@
 
                         <div class="form-group">
                             <label for="client-message">Poznámka / doplňující dotazy</label>
-                            <textarea id="client-message" name="Poznámka" rows="4" placeholder="Máte zájem o konkrétní termín, stravu nebo jiné požadavky?"></textarea>
+                            <textarea id="client-message" name="Poznámka" rows="4"
+                                placeholder="Máte zájem o konkrétní termín, stravu nebo jiné požadavky?"></textarea>
                         </div>
 
                         <div class="form-actions">
-                            <button type="button" class="btn btn-secondary" id="back-to-details-btn">Zpět na program</button>
+                            <button type="button" class="btn btn-secondary" id="back-to-details-btn">Zpět na
+                                program</button>
                             <button type="submit" class="btn">Odeslat poptávku</button>
                         </div>
                     </form>
@@ -227,5 +257,21 @@
             }
         });
     </script>
+    <script>
+        window.galleryImages = [
+            { src: 'images/Madeira/MADEIRA 2.jpg', caption: 'Poloostrov Ponta de São Lourenço' },
+            { src: 'images/Madeira/20250427_110504.jpg', caption: 'Madeira Firecrest' },
+            { src: 'images/Madeira/20250427_173831.jpg', caption: 'Tradiční slaměné domky v Santaně' },
+            { src: 'images/Madeira/20250428_104209.jpg', caption: 'Úchvatné vyhlídky na oceán' },
+            { src: 'images/Madeira/20250428_163039.jpg', caption: 'Poloostrov Ponta de São Lourenço' },
+            { src: 'images/Madeira/20250430_202623.jpg', caption: 'Západ slunce u divokého pobřeží' },
+            { src: 'images/Madeira/20250430_202743.jpg', caption: 'Lávové bazény v Porto Moniz' },
+            { src: 'images/Madeira/20250501_182944.jpg', caption: 'Poloostrov Ponta de São Lourenço' },
+            { src: 'images/Madeira/20250502_155711.jpg', caption: 'Tradiční proutěné saně' },
+            { src: 'images/Madeira/20250502_172959.jpg', caption: 'Uchvatná příroda Madeiry' }
+        ];
+    </script>
+    <script src="js/lightbox.js"></script>
 </body>
+
 </html>

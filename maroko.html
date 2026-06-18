@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maroko | CK Slunce</title>
-    <meta name="description" content="Poznejte kouzlo Maroka s CK Slunce. Nádherné památky, poušť Sahara a tradiční trhy.">
+    <meta name="description"
+        content="Poznejte kouzlo Maroka s CK Slunce. Nádherné památky, poušť Sahara a tradiční trhy.">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
         <nav>
-            <div class="logo">
-                <i class="fas fa-sun"></i> CK <span>Slunce</span>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="CK Slunce logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="maroko.html" class="active">Maroko</a></li>
@@ -27,8 +30,16 @@
     <main class="dest-page">
         <div class="dest-header">
             <h1>Kouzelné Maroko</h1>
-            <p class="dest-desc">Maroko je bránou do Afriky a zemí nekonečných kontrastů. Ztratíte se v křivolakých uličkách starobylých medin, ochutnáte tradiční tajine a mátový čaj a na hřbetu velblouda se vydáte vstříc západu slunce nad písečnými dunami nekonečné Sahary. Každý krok zde dýchá orientální mystikou.</p>
-            <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
+            <p class="dest-desc">Vydej se na sedmidenní dobrodružství napříč marockou Saharou –
+                z historické Marrákeše přes pohoří Atlas až do srdce nekonečných písečných dun.
+                Čeká tě putování s velbloudí karavanou, nocování pod hvězdami, tradiční nomádská kultura a jedny z
+                nejkrásnějších pouštních scenérií v oblasti Erg Zahar a okolí.
+                Autentický trek mimo civilizaci, kde se čas řídí jen rytmem rozlehlé pouště a nekonečných hvězd.
+            </p>
+            <div class="dest-actions">
+                <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
+                <a href="#" id="open-gallery-btn" class="btn btn-gallery"><i class="fas fa-images"></i> Galerie</a>
+            </div>
         </div>
 
         <div class="gallery">
@@ -41,7 +52,7 @@
     <div id="detail-modal" class="modal-overlay">
         <div class="modal-container">
             <button class="modal-close" id="close-modal-btn"><i class="fas fa-times"></i></button>
-            
+
             <!-- VIEW 1: PODROBNOSTI ZÁJEZDU -->
             <div id="modal-details-view">
                 <div class="modal-header">
@@ -63,39 +74,44 @@
                 </div>
                 <div class="modal-body">
                     <h3>O zájezdu</h3>
-                    <p>Vydejte se s námi na nezapomenutelnou cestu plnou vůní, barev a orientální mystiky. Tento zájezd je pečlivě sestaven tak, abyste poznali to nejlepší z Maroka – od královských měst plných historie, přes divoké pohoří Atlas, až po magické noci pod hvězdami na Saharské poušti.</p>
-                    
+                    <p>Vydej se na sedmidenní dobrodružství napříč marockou Saharou –
+                        z historické Marrákeše přes pohoří Atlas až do srdce nekonečných písečných dun.
+                        Čeká tě putování s velbloudí karavanou, nocování pod hvězdami, tradiční nomádská kultura a jedny
+                        z nejkrásnějších pouštních scenérií v oblasti Erg Zahar a okolí.
+                        Autentický trek mimo civilizaci, kde se čas řídí jen rytmem rozlehlé pouště a nekonečných hvězd.
+                    </p>
+
                     <h3>Detailní program</h3>
-                    <div class="program-timeline">
-                        <div class="program-day">
-                            <h4>1. den: Přílet do Marrákeše</h4>
-                            <p>Transfer do hotelu, ubytování a první nasátí atmosféry. Večerní návštěva slavného náměstí Jemaa el-Fnaa s kejklíři a stánky s jídlem.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>2. den: Krásy Marrákeše</h4>
-                            <p>Celodenní prohlídka města s průvodcem. Navštívíme palác Bahia, Saadské hrobky, zahradu Jardin Majorelle a proslulé trhy (souky).</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>3. den: Přechod pohoří Atlas & Aït Benhaddou</h4>
-                            <p>Přejezd přes pohoří Atlas přes průsmyk Tizi n'Tichka (2260 m). Prohlídka hliněné pevnosti Aït Benhaddou (UNESCO) a příjezd do filmového Ouarzazate.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>4. den: Soutěsky a brána Sahary</h4>
-                            <p>Průjezd údolím růží, procházka v úchvatné soutěsce Todra s obřími skalními stěnami. Odpoledne příjezd do pouštní brány Merzouga.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>5. den: Magická Sahara</h4>
-                            <p>Dopolední relax u bazénu. Odpoledne jízda na velbloudech do dun Erg Chebbi. Večer tradiční berberská večeře, hudba u ohně a noc v luxusním pouštním kempu.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>6. - 10. den: Císařská města, Fes a Chefchaouen</h4>
-                            <p>Pokračování cesty na sever přes Midelt do nejstaršího města Fes s jeho 9000 uličkami. Navštívíme také fotogenické modré město Chefchaouen, Casablanku s mešitou Hasana II. a vrátíme se do Marrákeše.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>11. den: Odlet domů</h4>
-                            <p>Volný čas na nákup posledních dárků a koření, transfer na letiště a odlet zpět do ČR.</p>
-                        </div>
-                    </div>
+                    <p> Sedmidenní výprava Saharou v Maroku
+                        1.-2. den
+                        Dobrodružství začíná v Marrákeši přejezdem přes pohoří Vysoký Atlas a slavný průsmyk Tizi
+                        n'Tichka (2 260 m).
+                        Cestou navštívíme historickou kasbu Ait Benhaddou zapsanou na seznamu světového dědictví UNESCO.
+                        Večer dorazíme do M'Hamidu, poslední oázy před skutečnou Saharou. První noc strávíte v pohodlném
+                        pouštním táboře.
+                        3.-6. den
+                        Následující čtyři dny budeme putovat Saharou s velbloudí karavanou. Zavazadla ponesou velbloudi,
+                        takže půjdeme pěkně nalehko. Každý den nás čeká přibližně 4–6 hodin chůze velmi různorodou
+                        pouštní krajinou – od nekonečných písečných dun přes kamenité planiny až po místa s tamaryšky a
+                        pozůstatky dávných nomádských osad.
+                        Během cesty navštívíme mauzoleum Sidi Naji, starý nomádský trh a vyschlé údolí Draa, které kdysi
+                        bývalo hlavním zdrojem vody v této oblasti. Vrcholem treku jsou nádherné dunové oblasti Erg
+                        Zahar, Erg Smar, Erg Ait Ounir a Erg Dwib. Zejména Erg Zahar patří k nejkrásnějším dunám marocké
+                        Sahary a nabízí úchvatné výhledy do všech stran.
+                        Každý den si budeme vychutnávat tradiční nomádský čaj a jídla připravovaná místními průvodci. V
+                        Erg Ait Ounir budeme mít možnost ochutnat chléb pečený tradičním způsobem přímo v písku.
+                        Náš tábor se bude stavět večer mezi dunami, kde si pak budeme vychutnat úchvatný západ slunce,
+                        naprosté ticho pouště a nakonec i jedinečnou hvězdnou oblohu.
+                        7.den
+                        Poslední den se vrátíne do M'Hamidu, kde po obědě nastoupíme na cestu zpět do Marrákeše. V tomto
+                        nádherném historickém městě si uděláme procházku na místní památky, do parku i tradiční souk
+                        (tržiště), které se proplétá labyrintem úzkých uliček mediny (staré město)
+
+                        Trek je vhodný pro běžně zdatné cestovatele, kteří chtějí poznat autentickou Saharu mimo
+                        turisticky nejnavštěvovanější oblasti.
+                        Hlavními zážitky bude putování s velbloudí karavanou, nocování pod hvězdami, setkání s nomádskou
+                        kulturou a jedinečná atmosféra nekonečné pouště.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" id="close-modal-btn-2">Zavřít</button>
@@ -107,7 +123,8 @@
             <div id="modal-form-view" style="display: none;">
                 <div class="modal-header">
                     <h2>Nezávazná poptávka</h2>
-                    <p class="form-intro">Vyplňte údaje níže. Po odeslání obdržíte potvrzení a my se vám ozveme zpět.</p>
+                    <p class="form-intro">Vyplňte údaje níže. Po odeslání obdržíte potvrzení a my se vám ozveme zpět.
+                    </p>
                 </div>
                 <div class="modal-body">
                     <!-- Zde změňte 'vas-email@domena.cz' na váš skutečný e-mail -->
@@ -116,7 +133,8 @@
                         <input type="hidden" name="_subject" value="Nová poptávka: Kouzelné Maroko">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
-                        <input type="text" name="_honey" style="display:none !important" tabindex="-1" autocomplete="off"> <!-- Honeypot Spam ochrana -->
+                        <input type="text" name="_honey" style="display:none !important" tabindex="-1"
+                            autocomplete="off"> <!-- Honeypot Spam ochrana -->
 
                         <div class="form-group">
                             <label for="dest-name">Vybraný zájezd</label>
@@ -126,18 +144,21 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="client-name">Jméno a příjmení *</label>
-                                <input type="text" id="client-name" name="Jméno a příjmení" required placeholder="Např. Jan Novák">
+                                <input type="text" id="client-name" name="Jméno a příjmení" required
+                                    placeholder="Např. Jan Novák">
                             </div>
                             <div class="form-group">
                                 <label for="client-email">E-mailová adresa *</label>
-                                <input type="email" id="client-email" name="Email" required placeholder="Např. jan.novak@email.cz">
+                                <input type="email" id="client-email" name="Email" required
+                                    placeholder="Např. jan.novak@email.cz">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="client-phone">Telefonní číslo *</label>
-                                <input type="tel" id="client-phone" name="Telefon" required placeholder="Např. +420 123 456 789">
+                                <input type="tel" id="client-phone" name="Telefon" required
+                                    placeholder="Např. +420 123 456 789">
                             </div>
                             <div class="form-group">
                                 <label for="client-travelers">Počet cestujících *</label>
@@ -147,11 +168,13 @@
 
                         <div class="form-group">
                             <label for="client-message">Poznámka / doplňující dotazy</label>
-                            <textarea id="client-message" name="Poznámka" rows="4" placeholder="Máte zájem o konkrétní termín, stravu nebo jiné požadavky?"></textarea>
+                            <textarea id="client-message" name="Poznámka" rows="4"
+                                placeholder="Máte zájem o konkrétní termín, stravu nebo jiné požadavky?"></textarea>
                         </div>
 
                         <div class="form-actions">
-                            <button type="button" class="btn btn-secondary" id="back-to-details-btn">Zpět na program</button>
+                            <button type="button" class="btn btn-secondary" id="back-to-details-btn">Zpět na
+                                program</button>
                             <button type="submit" class="btn">Odeslat poptávku</button>
                         </div>
                     </form>
@@ -223,5 +246,14 @@
             }
         });
     </script>
+    <script>
+        window.galleryImages = [
+            { src: 'images/Maroko/Erg Zahar Morocco Singing dunes and nomadic trek.jpeg', caption: 'Písečné duny Erg Zahar na Sahaře' },
+            { src: 'images/maroko_1.jpg', caption: 'Západ slunce na poušti v Maroku' },
+            { src: 'images/maroko_2.jpg', caption: 'Tradiční marocká architektura a trhy' }
+        ];
+    </script>
+    <script src="js/lightbox.js"></script>
 </body>
+
 </html>

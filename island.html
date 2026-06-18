@@ -15,9 +15,9 @@
 
     <header>
         <nav>
-            <div class="logo">
-                <i class="fas fa-sun"></i> CK <span>Slunce</span>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="CK Slunce logo">
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="maroko.html">Maroko</a></li>
@@ -30,11 +30,14 @@
     <main class="dest-page">
         <div class="dest-header">
             <h1>Tajemný Island</h1>
-            <p class="dest-desc">Island je severská ostrovní země, kde spolu bojují protiklady - led a oheň. Nachází se
-                zde jedny z nejpozoruhodnějších přírodních úkazů v Evropě. Čekají na vás bouřící vodopády s obrovskou
-                silou, vybuchující gejzíry, sopečné pláže s černým pískem a majestátní ledovce. Pravé dobrodružství na
-                okraji polárního kruhu.</p>
-            <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
+            <p class="dest-desc">Vydej se na Island, na úchvatný ostrov protikladů, na ostrov ohně a ledu. Nachází se
+                zde jedny z nejpozoruhodnějších přírodních úkazů Evropy. Čekají tě tu ohromující vodopády, vybuchující
+                gejzíry, černé sopečné pláže, majestátné ledovce a nezapomenutelné koupání v teplých pramenech. Co víc
+                si přát? Pravé dobrodružství na okraji polárního kruhu.</p>
+            <div class="dest-actions">
+                <a href="#" id="open-modal-btn" class="btn">Mám zájem o zájezd</a>
+                <a href="#" id="open-gallery-btn" class="btn btn-gallery"><i class="fas fa-images"></i> Galerie</a>
+            </div>
         </div>
 
         <div class="gallery">
@@ -69,131 +72,120 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <h3>O zájezdu</h3>
-                    <p>Island, země ohně a ledu, je jedním z posledních divokých koutů Evropy. Náš dobrodružný okruh vás
-                        provede kolem celého ostrova a ukáže vám ty nejmajestátnější vodopády, bublající bahno, aktivní
-                        gejzíry, černé sopečné pláže i plovoucí ledové kry. Třešničkou na dortu je plavba za pozorováním
-                        velryb a relaxace v termálních lázních.</p>
+                    <h3>Co na zájezdu zažiješ</h3>
+                    <ul class="program-highlights">
+                        <li><i class="fas fa-compass"></i> Prozkoumej sopečné krátery, gejzíry a ledovcové laguny a
+                            vydej se na výlet divokými fjordy nebo si pojď odpočinout v horkých pramenech.</li>
+                        <li><i class="fas fa-tree"></i> Island je ostrov rozmanité a téměř nedotčené přírody. Ostrov
+                            ledovců, sopek, fjordů, teplých pramenů, majestátných vodopádů i vysokých hor.</li>
+                        <li><i class="fas fa-heart"></i> Island je možná drsný, možná přívětivý. Pro každého však
+                            naprosto jedinečný.</li>
+                        <li><i class="fas fa-mountain"></i> Islandská krajina patří mezi nejdramatičtější na světě. Na
+                            vlastní oči uvidíš mohutné vodopády Gullfoss, Seljalandfoss a Skógafoss, projdeš se mezi
+                            tektonickými deskami v národním parku Þingvellir nebo navštívíš slavný gejzír Strokkur,
+                            který v pravidelných intervalech chrlí vodu do výšky několika desítek metrů. Nebude chybět
+                            ani procházka po ledovci Solheimajokul nebo koupání v teplých pramenech uprostřed
+                            majestátných hor.</li>
+                        <li><i class="fas fa-city"></i> Hlavní město Islandu Reykjavík tě překvapí živým kulturním
+                            životem a ikonickou architekturou, jako je kostel Hallgrímskirkja nebo moderní koncertní síň
+                            Harpa.</li>
+                        <li><i class="fas fa-users"></i> Prozkoumej Island s někým, kdo tu žil a zavede tě na místa, kam
+                            ostatní nechodí. Pojď dále, pojď s námi.</li>
+                    </ul>
 
-                    <h3>Detailní program</h3>
-                    <div class="program-timeline">
-                        <div class="program-day">
-                            <h4>1. den: Přílet do Keflavíku, termální lázně</h4>
-                            <p>Přílet na Island. V závislosti na letovém řádu návštěva a koupání v termálních lázních
-                                uprostřed lávových polí. Transfer do ubytování v Reykjavíku.</p>
+                    <div class="price-info-container">
+                        <div class="price-info-box included">
+                            <h4><i class="fas fa-check-circle"></i> Je v ceně</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Ubytování na 8 nocí</li>
+                                <li><i class="fas fa-check"></i> Doprava po ostrově</li>
+                                <li><i class="fas fa-check"></i> Služby průvodce a řidiče</li>
+                                <li><i class="fas fa-check"></i> Plavba za pozorováním velryb</li>
+                                <li><i class="fas fa-check"></i> Vstup do termálních lázní</li>
+                            </ul>
                         </div>
-                        <div class="program-day">
-                            <h4>2. den: Zlatý okruh (Golden Circle)</h4>
-                            <p>Návštěva národního parku Þingvellir (trhlina mezi severoamerickou a euroasijskou
-                                tektonickou deskou), geotermální oblasti s vybuchujícím gejzírem Strokkur a
-                                monumentálního vodopádu Gullfoss.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>3. den: Jižní pobřeží – Vodopády & černá pláž</h4>
-                            <p>Zastávka u pohádkového vodopádu Seljalandsfoss (lze projít za vodní stěnu) a mohutného
-                                Skógafoss. Procházka po světoznámé černé pláži Reynisfjara s čedičovými sloupy u
-                                městečka Vík.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>4. den: Ledovcová laguna Jökulsárlón & Diamantová pláž</h4>
-                            <p>Přejezd podél obrovského ledovce Vatnayökull. Návštěva slavné laguny Jökulsárlón s
-                                plujícími modrými krami a přilehlé Diamantové pláže. Ubytování na východě.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>5. den: Východní fjordy & termály u jezera Mývatn</h4>
-                            <p>Cesta scénickou krajinou východních fjordů s rybářskými vesničkami. Přejezd k jezeru
-                                Mývatn a večerní relaxace v termálních lázních Mývatn Nature Baths.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>6. den: Detifoss & sopečná krajina Mývatnu</h4>
-                            <p>Návštěva nejmohutnějšího vodopádu Evropy Dettifoss. Průzkum okolí jezera Mývatn:
-                                bublající bahenní sopky Hverir, lávový labyrint Dimmuborgir a pseudokrátery.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>7. den: Akureyri & pozorování velryb v Husavíku</h4>
-                            <p>Návštěva severního hlavního města Akureyri. Přejezd do Husavíku a plavba lodí za
-                                pozorováním velryb a delfínů v zálivu Skjálfandi.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>8. den: Poloostrov Snæfellsnes – "Island v miniatuře"</h4>
-                            <p>Cesta na západní poloostrov. Vyfocení ikonické hory Kirkjufell s vodopádem, procházka po
-                                divokém útesovém pobřeží u Arnarstapi a návrat do Reykjavíku.</p>
-                        </div>
-                        <div class="program-day">
-                            <h4>9. den: Reykjavík & odlet domů</h4>
-                            <p>Krátká prohlídka hlavního města (kostel Hallgrímskirkja, budova Harpa), nákup suvenýrů,
-                                transfer na letiště a odlet zpět do ČR.</p>
+                        <div class="price-info-box excluded">
+                            <h4><i class="fas fa-times-circle"></i> Není v ceně</h4>
+                            <ul>
+                                <li><i class="fas fa-times"></i> Letenky zpáteční z Prahy</li>
+                                <li><i class="fas fa-times"></i> Cestovní pojištění</li>
+                                <li><i class="fas fa-times"></i> Strava</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" id="close-modal-btn-2">Zavřít</button>
-                    <button class="btn" id="open-form-btn">Nezávazně poptat</button>
+
+
                 </div>
             </div>
-
-            <!-- VIEW 2: INQUIRY FORM (Odesílá email přes FormSubmit) -->
-            <div id="modal-form-view" style="display: none;">
-                <div class="modal-header">
-                    <h2>Nezávazná poptávka</h2>
-                    <p class="form-intro">Vyplňte údaje níže. Po odeslání obdržíte potvrzení a my se vám ozveme zpět.
-                    </p>
-                </div>
-                <div class="modal-body">
-                    <!-- Zde změňte 'vas-email@domena.cz' na váš skutečný e-mail -->
-                    <form action="https://formsubmit.co/tomasphotoall@gmail.com" method="POST" class="inquiry-form">
-                        <!-- Konfigurace FormSubmit -->
-                        <input type="hidden" name="_subject" value="Nová poptávka: Tajemný Island">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="text" name="_honey" style="display:none !important" tabindex="-1" autocomplete="off"> <!-- Honeypot Spam ochrana -->
-
-                        <div class="form-group">
-                            <label for="dest-name">Vybraný zájezd</label>
-                            <input type="text" id="dest-name" name="Zájezd" value="Tajemný Island" readonly>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="client-name">Jméno a příjmení *</label>
-                                <input type="text" id="client-name" name="Jméno a příjmení" required
-                                    placeholder="Např. Jan Novák">
-                            </div>
-                            <div class="form-group">
-                                <label for="client-email">E-mailová adresa *</label>
-                                <input type="email" id="client-email" name="Email" required
-                                    placeholder="Např. jan.novak@email.cz">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="client-phone">Telefonní číslo *</label>
-                                <input type="tel" id="client-phone" name="Telefon" required
-                                    placeholder="Např. +420 123 456 789">
-                            </div>
-                            <div class="form-group">
-                                <label for="client-travelers">Počet cestujících *</label>
-                                <input type="number" id="client-travelers" name="Počet osob" min="1" value="2" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="client-message">Poznámka / doplňující dotazy</label>
-                            <textarea id="client-message" name="Poznámka" rows="4"
-                                placeholder="Máte zájem o konkrétní termín, stravu nebo jiné požadavky?"></textarea>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="button" class="btn btn-secondary" id="back-to-details-btn">Zpět na
-                                program</button>
-                            <button type="submit" class="btn">Odeslat poptávku</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="close-modal-btn-2">Zavřít</button>
+                <button class="btn" id="open-form-btn">Nezávazně poptat</button>
             </div>
-
         </div>
+
+        <!-- VIEW 2: INQUIRY FORM (Odesílá email přes FormSubmit) -->
+        <div id="modal-form-view" style="display: none;">
+            <div class="modal-header">
+                <h2>Nezávazná poptávka</h2>
+                <p class="form-intro">Vyplňte údaje níže. Po odeslání obdržíte potvrzení a my se vám ozveme zpět.
+                </p>
+            </div>
+            <div class="modal-body">
+                <!-- Zde změňte 'vas-email@domena.cz' na váš skutečný e-mail -->
+                <form action="https://formsubmit.co/tomasphotoall@gmail.com" method="POST" class="inquiry-form">
+                    <!-- Konfigurace FormSubmit -->
+                    <input type="hidden" name="_subject" value="Nová poptávka: Tajemný Island">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none !important" tabindex="-1" autocomplete="off">
+                    <!-- Honeypot Spam ochrana -->
+
+                    <div class="form-group">
+                        <label for="dest-name">Vybraný zájezd</label>
+                        <input type="text" id="dest-name" name="Zájezd" value="Tajemný Island" readonly>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="client-name">Jméno a příjmení *</label>
+                            <input type="text" id="client-name" name="Jméno a příjmení" required
+                                placeholder="Např. Jan Novák">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-email">E-mailová adresa *</label>
+                            <input type="email" id="client-email" name="Email" required
+                                placeholder="Např. jan.novak@email.cz">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="client-phone">Telefonní číslo *</label>
+                            <input type="tel" id="client-phone" name="Telefon" required
+                                placeholder="Např. +420 123 456 789">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-travelers">Počet cestujících *</label>
+                            <input type="number" id="client-travelers" name="Počet osob" min="1" value="2" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="client-message">Poznámka / doplňující dotazy</label>
+                        <textarea id="client-message" name="Poznámka" rows="4"
+                            placeholder="Máte zájem o konkrétní termín, stravu nebo jiné požadavky?"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="back-to-details-btn">Zpět na
+                            program</button>
+                        <button type="submit" class="btn">Odeslat poptávku</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
     </div>
 
     <footer>
@@ -258,6 +250,18 @@
             }
         });
     </script>
+    <script>
+        window.galleryImages = [
+            { src: 'images/Island/vodopád Skogarfoss.jpg', caption: 'Majestátní vodopád Skógafoss' },
+            { src: 'images/Island/Arnastapi.jpg', caption: 'Malebný přístav Arnarstapi' },
+            { src: 'images/Island/Duhové hory.jpg', caption: 'Duhové hory Landmannalaugar' },
+            { src: 'images/Island/Geysir Strokkur.jpg', caption: 'Aktivní gejzír Strokkur' },
+            { src: 'images/Island/Ledovec Solheimajokul.jpg', caption: 'Ledovcový splaz Sólheimajökull' },
+            { src: 'images/Island/Reykajadalur.jpg', caption: 'Horké prameny v údolí Reykjadalur' },
+            { src: 'images/Island/Teplá řeka Reykjadalur.jpg', caption: 'Koupání v teplé řece Reykjadalur' }
+        ];
+    </script>
+    <script src="js/lightbox.js"></script>
 </body>
 
 </html>
