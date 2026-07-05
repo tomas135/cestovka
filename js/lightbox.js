@@ -101,6 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
         openLightbox();
     });
 
+    // Also allow clicking individual gallery preview images to open lightbox
+    const previewImages = document.querySelectorAll('.gallery img');
+    previewImages.forEach((img) => {
+        img.addEventListener('click', () => {
+            const src = img.getAttribute('src');
+            const idx = images.findIndex(item => item.src === src);
+            if (idx !== -1) {
+                currentIndex = idx;
+                updateLightbox();
+                lightbox.classList.add('active');
+                document.body.classList.add('modal-open');
+            } else {
+                openLightbox();
+            }
+        });
+    });
+
     closeBtn.addEventListener('click', closeLightbox);
     
     prevBtn.addEventListener('click', (e) => {
