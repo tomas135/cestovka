@@ -212,6 +212,20 @@
                 </div>
             </div>
 
+            <!-- VIEW 3: SUCCESS MESSAGE -->
+            <div id="modal-success-view" style="display: none;">
+                <div class="modal-body" style="text-align: center; padding: 40px 20px;">
+                    <div class="success-icon" style="margin: 0 auto 20px auto; display: flex; justify-content: center; align-items: center; width: 64px; height: 64px; background-color: rgba(46, 125, 50, 0.1); color: #2e7d32; border-radius: 50%;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <h2 style="color: #2e7d32; margin-bottom: 10px;">Děkujeme za poptávku!</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6; color: #555;">
+                        Vaše poptávka byla úspěšně odeslána. Brzy se vám ozveme zpět.
+                    </p>
+                    <button class="btn" id="success-close-btn" style="min-width: 120px;">Zavřít</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -223,6 +237,7 @@
         const openModalBtn = document.getElementById('open-modal-btn');
         const closeModalBtn = document.getElementById('close-modal-btn');
         const closeModalBtn2 = document.getElementById('close-modal-btn-2');
+        const successCloseBtn = document.getElementById('success-close-btn');
         const modal = document.getElementById('detail-modal');
 
         // Form transition elements
@@ -230,12 +245,16 @@
         const backToDetailsBtn = document.getElementById('back-to-details-btn');
         const modalDetailsView = document.getElementById('modal-details-view');
         const modalFormView = document.getElementById('modal-form-view');
+        const modalSuccessView = document.getElementById('modal-success-view');
+        const form = document.querySelector('.inquiry-form');
 
         openModalBtn.addEventListener('click', (e) => {
             e.preventDefault();
             // Reset to details view when opening
             modalDetailsView.style.display = 'block';
             modalFormView.style.display = 'none';
+            modalSuccessView.style.display = 'none';
+            form.reset();
             modal.classList.add('active');
             document.body.classList.add('modal-open');
         });
@@ -247,11 +266,13 @@
 
         closeModalBtn.addEventListener('click', closeModal);
         closeModalBtn2.addEventListener('click', closeModal);
+        successCloseBtn.addEventListener('click', closeModal);
 
         // Transition from Details to Form
         openFormBtn.addEventListener('click', () => {
             modalDetailsView.style.display = 'none';
             modalFormView.style.display = 'block';
+            modalSuccessView.style.display = 'none';
             // Scroll modal to top so user sees the form title
             document.querySelector('.modal-container').scrollTop = 0;
         });
@@ -260,6 +281,7 @@
         backToDetailsBtn.addEventListener('click', () => {
             modalFormView.style.display = 'none';
             modalDetailsView.style.display = 'block';
+            modalSuccessView.style.display = 'none';
             document.querySelector('.modal-container').scrollTop = 0;
         });
 
@@ -275,6 +297,45 @@
             if (e.key === 'Escape' && modal.classList.contains('active')) {
                 closeModal();
             }
+        });
+
+        // Handle AJAX form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = 'Odesílám...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData.entries());
+            const json = JSON.stringify(object);
+
+            fetch('https://formsubmit.co/ajax/ckslunce@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(response => {
+                if (response.ok) {
+                    modalFormView.style.display = 'none';
+                    modalSuccessView.style.display = 'block';
+                    form.reset();
+                } else {
+                    throw new Error('Chyba při odesílání');
+                }
+            })
+            .catch(error => {
+                alert('Omlouváme se, ale při odesílání formuláře došlo k chybě. Zkuste to prosím znovu nebo nás kontaktujte přímo.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            });
         });
     </script>
     <script>
